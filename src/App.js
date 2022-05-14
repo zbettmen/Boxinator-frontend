@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.scss';
+import FormPage from './components/FormPage';
+import TablePage from './components/TablePage';
+import Header from './components/Header';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
+
+  const [page, setPage] = React.useState("formpage")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setPage={setPage} />
+
+      {page === "formpage" && <FormPage />}
+
+      {page === "tablepage" && <TablePage />}
+
+      <ToastContainer />
+
     </div>
   );
 }

@@ -1,0 +1,14 @@
+@URL = http://localhost:8080
+
+GET {{URL}}/box
+
+###
+POST {{URL}}/box
+Content-Type: application/json
+
+{
+ "name":"Rijad",
+ "weight":50,
+ "color":"#f12453",
+ "country":"Sweden"
+}

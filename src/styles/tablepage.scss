@@ -1,0 +1,25 @@
+@import "./variables.scss";
+
+.table {
+
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.trHead {
+    background: $bg;
+
+    .th {
+        padding: $sm-spacing;
+        color: $text;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 14px;
+       
+    }
+}
+
+
+
+
